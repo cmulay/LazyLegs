@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:layout_marginBottom="150dp"
+        android:layout_above="@+id/progress_circular"
+        android:fontFamily="monospace"
+        />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="256dp"
+        android:layout_height="254dp"
+        android:layout_centerInParent="true"
+        app:cpb_background_progressbar_color="#F2F2F2"
+        app:cpb_background_progressbar_width="20dp"
+        app:cpb_progress_max="2500"
+        app:cpb_progressbar_color="#417CF3"
+        app:cpb_progressbar_width="15dp"
+        app:cpb_round_border="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_stepsTaken"
+        android:layout_centerInParent="true"
+        android:text="@string/initial_steps"
+        android:fontFamily="serif-monospace"
+        android:textColor="@color/black"
+        android:textSize="80sp"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_totalMax"
+        android:layout_centerInParent="true"
+        android:text="@string/goal_steps"
+        android:fontFamily="serif-monospace"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:layout_below="@id/tv_stepsTaken"
+    />
+</RelativeLayout>
